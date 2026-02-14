@@ -50,29 +50,7 @@ npm run preview
 
 1. 배포 환경에 `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` 등록
 2. `npm run build` 성공 확인
-3. SPA 라우트 폴백 설정(`index.html` 리라이트)
-
-## SPA 라우트 폴백
-
-React Router SPA는 새로고침 시 서버가 `index.html`을 반환하도록 설정해야 합니다.
-
-### Netlify
-
-`public/_redirects` 파일:
-
-```txt
-/* /index.html 200
-```
-
-### Vercel
-
-`vercel.json` 예시:
-
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
-```
+3. 서버 환경에서 정적 파일 및 API 연동 정상 동작 확인
 
 ## Supabase 설정 문서
 
