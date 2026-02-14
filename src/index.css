@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Sans KR', 'Pretendard', 'SUIT', sans-serif;
+  color: #0f172a;
+  --vm-bg: #f5f8fc;
+  --vm-bg-strong: #e7edf6;
+  --vm-text: #0f172a;
+  --vm-muted: #475569;
+  --vm-accent: #1e40af;
+  --vm-accent-2: #0f172a;
+}
+
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(980px 640px at 8% -10%, #dbe8ff 0%, rgba(219, 232, 255, 0) 62%),
+    radial-gradient(900px 560px at 96% -12%, #d7f0ec 0%, rgba(215, 240, 236, 0) 58%),
+    linear-gradient(180deg, #f8fbff 0%, #f2f6fc 46%, #eef4fb 100%);
+  background-color: #eef4fb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(980px 640px at 8% -10%, #dbe8ff 0%, rgba(219, 232, 255, 0) 62%),
+    radial-gradient(900px 560px at 96% -12%, #d7f0ec 0%, rgba(215, 240, 236, 0) 58%),
+    linear-gradient(180deg, #f8fbff 0%, #f2f6fc 46%, #eef4fb 100%);
+  color: var(--vm-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+html.vm-public-mode,
+body.vm-public-mode {
+  background: linear-gradient(180deg, #ffb3de 0%, #ffb9e1 52%, #ffc5e6 100%) !important;
+  background-color: #ffc5e6 !important;
+}
+
+html.vm-auth-mode,
+body.vm-auth-mode {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.vm-page-shell {
+  background:
+    radial-gradient(980px 640px at 10% -12%, rgba(178, 209, 255, 0.34) 0%, rgba(178, 209, 255, 0) 64%),
+    radial-gradient(860px 520px at 92% -8%, rgba(170, 231, 221, 0.32) 0%, rgba(170, 231, 221, 0) 58%);
+}
+
+.vm-public-shell {
+  background: #ffb3de;
+}
+
+.vm-player {
+  padding-top: env(safe-area-inset-top, 0px) !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+}
+
+.vm-gear-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.vm-gear-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.vm-auth-card {
+  border: 1px solid #dbe4ef;
+  background: #ffffff;
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.vm-input {
+  border: 1px solid #d1dae6;
+  background: #f8fafd;
+  color: var(--vm-text);
+}
+
+.vm-input::placeholder {
+  color: #94a3b8;
+}
+
+.vm-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+}
+
+.vm-primary-btn {
+  border: 1px solid #0f172a;
+  background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.22);
+}
+
+.vm-primary-btn:hover {
+  filter: brightness(1.06);
+}
+
+.vm-player > main {
+  border: 1px solid #ffb3de;
+  background: #ffb3de;
+  box-shadow:
+    0 28px 70px rgba(176, 64, 120, 0.16);
+}
+
+.vm-studio {
+  border: 1px solid #dbe4ef;
+  background: #fdfefe;
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, 0.08);
+}
